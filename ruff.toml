@@ -1,0 +1,163 @@
+line-length = 88 # 88 is the default in ruff
+exclude = [ # default ruff excludes included for reference
+    # ".bzr",
+    # ".direnv",
+    # ".eggs",
+    # ".git",
+    # ".git-rewrite",
+    # ".hg",
+    # ".mypy_cache",
+    # ".nox",
+    # ".pants.d",
+    # ".pytype",
+    # ".ruff_cache",
+    # ".svn",
+    # ".tox",
+    ".venv",
+    # "__pypackages__",
+    # "_build",
+    # "buck-out",
+    # "build",
+    # "dist",
+    # "node_modules",
+    # "venv",
+    ".ipynb",
+]
+extend-exclude = [ # exclude in addition to files in `exclude` section
+    # custom excludes
+    ".code",
+    ".coverage",
+    "coverage",
+    ".idea",
+    ".mypy",
+    "node_modules",
+    "__pycache__",
+    ".pytest_cache",
+]
+
+[lint]
+select = [
+    # Pyflakes
+    "F",
+    # PYcodestyle
+    "E", # Errors
+    "W", # Warnings
+    # isort
+    "I",
+    # pep8-naming
+    # "N", # discuss
+    # pydocstyle
+    # "D",
+    # pyupgrade
+    # "UP", # enable soon but discuss annotations from __future__ first
+    # flake8
+    "YTT", # flake8-2020
+    #"ANN", # flake8-annotations # Turn on when ready
+    "ASYNC", # flake8-async
+    # "BLE", # flake8-blind-except # Turn on when ready
+    "S", # flake8-bandit # Turn on when ready
+    "FBT", #flake8-boolean-trap # Turn on when ready
+    "B", # flake8-bugbear
+    "A", # flake8-builtins
+    "COM", # flake8-commas
+    "C4", # flake8-comprehensions
+    "DTZ", # flake8-datetimez
+    "T10", # flake8-debugger
+    "EM", # flake8-errmsg
+    "FA", # flake8-future-annotations # discuss
+    "ISC", # flake8-implicit-str-concat
+    "G", # flake8-logging-format
+    "INP", # flake8-no-pep420
+    "PIE", # flake8-pie
+    "T20", # flake8-print # discuss
+    "PT", # flake8-pytest-style # discuss
+    "Q", # flake8-quotes
+    "RSE", # flake8-raise
+    "RET", # flake8-return # discuss
+    "SLF", # flake8-self # Turn on when ready
+    "SLOT", # flake8-slots
+    "SIM", # flake8-simplify
+    "TID", # flake8-tidy-imports
+    "TCH", # flake8-type-checking # discuss
+    "INT", # flake8-gettext
+    "LOG", # flake8-log # in preview
+    "ARG", # flake8-unsued-arguments
+    "PTH", # flake8-use-pathlib # discuss
+    "TD", # flake8-todos # discuss
+    # eradicate (remove commented code)
+    # "ERA", # discuss
+    # pandas-vet
+    "PD",
+    # pygrep-hooks
+    "PGH",
+    # Pylint
+    "PL",
+    # tryceratrops (exception handling linting)
+    "TRY", # Turn on when ready
+    # flynt
+    "FLY",
+    # NumPy-specific rules
+    "NPY",
+    # Perflint
+    "PERF", # in preview
+
+    # Ruff-specific rules
+    "RUF", # Turn on when ready
+]
+
+ignore = [
+    "COM812",
+    "ISC001",
+    "ANN101",
+    "E501", # line too long
+    "S603",
+    "T201", # disallow 'print'
+    # "PTH", # Path migration
+    "EM101", # exception must not use string literal
+    "PLR0913", # too many arguments in function definition
+    "TRY003", # long messages outside the exception class
+    "S607", # starting a process with a partial executable path
+    "EM102" # exception must not use an f-string literal
+]
+
+
+[format]
+indent-style = "space"
+skip-magic-trailing-comma = false
+quote-style = "double"
+
+[lint.flake8-annotations]
+allow-star-arg-any = true
+suppress-dummy-args = true
+
+[lint.flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "double"
+multiline-quotes = "double"
+
+[lint.isort]
+case-sensitive = true
+combine-as-imports = true
+extra-standard-library = ["typing_extensions"]
+split-on-trailing-comma = false
+
+[lint.pydocstyle]
+convention = "google"
+
+[lint.flake8-comprehensions]
+allow-dict-calls-with-keyword-arguments = true
+
+[lint.flake8-unused-arguments]
+ignore-variadic-names = true
+
+[lint.pep8-naming]
+ignore-names = ["i","j","k","ex","_","pk","x","y","z","e","x1","x2","y1","y2","w","h","cx","cy","iou","k","v","f","ft"]
+
+[lint.per-file-ignores]
+"tests/**/*.py" = [
+    # at least this three should be fine in tests:
+    "PT011",
+    "S101", # asserts allowed in tests...
+    "ARG", # Unused function args -> fixtures nevertheless are functionally relevant...
+    "FBT", # Don't care about booleans as positional arguments in tests, e.g. via @pytest.mark.parametrize()
+]
