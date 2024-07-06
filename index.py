@@ -11,7 +11,6 @@ from api import LocationAPI, ProgramAPI, load_api
 
 ROLLOVER_HOUR = 7
 
-
 MY_NAMESPACE = uuid.UUID("ca6c8e77-59a4-4e51-919c-25e38457f0ee")
 
 
@@ -111,7 +110,7 @@ def create_frab_xml(api, title="Vierdaagsefeesten", flt=lambda _: True):
         date = (start_date + timedelta(days=d - 1)).strftime("%Y-%m-%d")
         day = ET.SubElement(schedule, "day", date=date, index=str(d))
         day.set("start", f"{date}T09:00:00+02:00")
-        day.set("end", f"{date}T23:59:00+02:00")
+        day.set("end", f"{date}T23:59:00+02:00") # TODO: use rollover hour
         xdays.append((day, {}))
 
     for program in api.programs:
@@ -122,10 +121,12 @@ def create_frab_xml(api, title="Vierdaagsefeesten", flt=lambda _: True):
             day_ix = api.day_ix_by_id(program.day.id)
             _, xrooms = xdays[day_ix]
             loc_name = render_location_name(api.locations_ids[program.location.id])
+            # todo: create all rooms below
             if loc_name not in xrooms:
                 xrooms[loc_name] = ET.Element("room", name=loc_name)
             xrooms[loc_name].append(event)
 
+    # sort rooms by the number of events in their parents
     c = Counter()
     all_rooms = set()
     for _, xr in xdays:
