@@ -4,10 +4,12 @@ import argparse
 import uuid
 import xml.etree.ElementTree as ET
 from collections import Counter
-from datetime import datetime, timedelta
+from datetime import datetime, time, timedelta
 from pathlib import Path
 
-from api import LocationAPI, ProgramAPI, load_api
+from pydantic import BaseModel
+
+from api import LocationAPI, AllAPI, ProgramAPI, load_api, api_result
 
 ROLLOVER_HOUR = 7
 
@@ -25,16 +27,17 @@ def generate_deterministic_uuid(*args):
 def filter_interesting(program: ProgramAPI) -> bool:
     if program.location is None:
         return False
-    loc = api.top_location(api.locations_ids[program.location.id])
-    return api.top_location(loc).slug in ("valkhof-festival", "de-kaaij")
+    loc = program.location.get().top_location
+    return loc.slug in ("valkhof-festival", "de-kaaij")
 
 def render_location_name(location: LocationAPI) -> str:
     return location.title \
         .replace("Festival ", "") \
         .replace("Stadseiland ", "") \
         .replace(" aan de ", "@") \
-        .replace(" at the ", "@")
-
+        .replace(" at the ", "@") \
+        .replace("Park Kronenburg", "Kronenburg") \
+        .replace(": Hosted by Open Source Radio", "") \
 
 def event2frab(event: ProgramAPI) -> ET.Element:
     start = datetime.combine(
@@ -50,7 +53,7 @@ def event2frab(event: ProgramAPI) -> ET.Element:
     if start >= end:
         print(f"Warning: Event {event.title} starts at {start} and ends at {end}")
         end = start + timedelta(hours=1)
-    room = api.locations_ids[event.location.id].slug if event.location else "none"
+    room = event.location.get().slug if event.location else "none"
     title = event.title
     ret = ET.Element("event")
     ret.set("id", str(event.id))
@@ -68,7 +71,7 @@ def event2frab(event: ProgramAPI) -> ET.Element:
     ET.SubElement(ret, "abstract").text = event.description_short
     ET.SubElement(ret, "type").text = "performance"
     if event.location:
-        top_location = api.top_location(api.locations_ids[event.location.id])
+        top_location = event.location.get().top_location
         ET.SubElement(ret, "track").text = render_location_name(top_location)
     ET.SubElement(ret, "language")  # .text = "en"
     slug = event.slug.encode("ascii", "ignore").decode()
@@ -92,7 +95,7 @@ def event2frab(event: ProgramAPI) -> ET.Element:
     return ret
 
 
-def create_frab_xml(api, title="Vierdaagsefeesten", flt=lambda _: True):
+def create_frab_xml(api: AllAPI, title="Vierdaagsefeesten", flt=lambda _: True):
     schedule = ET.Element("schedule")
     ET.SubElement(schedule, "version").text = "0.2"
     conference = ET.SubElement(schedule, "conference")
@@ -120,7 +123,7 @@ def create_frab_xml(api, title="Vierdaagsefeesten", flt=lambda _: True):
             event = event2frab(program)
             day_ix = api.day_ix_by_id(program.day.id)
             _, xrooms = xdays[day_ix]
-            loc_name = render_location_name(api.locations_ids[program.location.id])
+            loc_name = render_location_name(program.location.get())
             # todo: create all rooms below
             if loc_name not in xrooms:
                 xrooms[loc_name] = ET.Element("room", name=loc_name)
@@ -147,8 +150,8 @@ def create_frab_xml(api, title="Vierdaagsefeesten", flt=lambda _: True):
 # todo: download https://www.vierdaagsefeesten.nl/api/all
 
 def main(input_file: Path, output_file: Path, *, only_interesting: bool = False):
-    global api
     api = load_api(input_file)
+    api_result.set(api)
     title = "Vierdaagsefeesten" if not only_interesting else "Vierdaagsefeesten (Valkhof)"
     xml_tree = create_frab_xml(api, title, filter_interesting if only_interesting else lambda _: True)
     xml_tree.write(output_file, encoding="UTF-8", xml_declaration=True)

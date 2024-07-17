@@ -1,15 +1,17 @@
 from __future__ import annotations
 
+from contextvars import ContextVar
 import json
 from datetime import datetime  # noqa: TCH003
 from functools import cached_property
-from typing import TYPE_CHECKING, Any, Literal
+from typing import TYPE_CHECKING, Any, Literal, TypeVar, Generic, cast
 
 if TYPE_CHECKING:
     from pathlib import Path
 
 from pydantic import BaseModel
 
+api_result = ContextVar('api_result')
 
 class DayAPI(BaseModel):
     id: int
@@ -51,12 +53,19 @@ class LocationAPI(BaseModel):
     hasProgramOn: list[DayPart | None]
     postDate: datetime
     dateUpdated: datetime
+    @cached_property
+    def top_location(self) -> LocationAPI:
+        if self.parent is None:
+            return self
+        return api_result.get().locations_ids[self.parent]
 
-
-class Ref(BaseModel):
+T = TypeVar('T')
+class Ref(BaseModel, Generic[T]):
     id: int
+    def get(self) -> T:
+        return cast(T, api_result.get().all_ids[self.id])
 
-class DayRef(Ref):
+class DayRef(Ref[DayAPI]):
     date: datetime
 
 
@@ -74,8 +83,8 @@ class ProgramAPI(BaseModel):
     sortDate: str
     start_time: str
     end_time: str
-    location: Ref | None
-    genres: list[Ref]
+    location: Ref[LocationAPI] | None
+    genres: list[Ref[GenreAPI]]
     theme: Ref | None
     is_highlight: bool
     originCountry: bool
@@ -137,6 +146,11 @@ class AllAPI(BaseModel):
     @cached_property
     def programs_ids(self) -> dict[int, ProgramAPI]:
         return {program.id: program for program in self.programs}
+
+    @cached_property
+    def all_ids(self) -> dict[int, BaseModel]:
+        assert (self.days_ids.keys() & self.locations_ids.keys() & self.genres_ids.keys() & self.programs_ids.keys()) == set()
+        return cast(dict[int, BaseModel], self.days_ids | self.locations_ids | self.genres_ids | self.programs_ids)
 
     def day_ix_by_id(self, day_id: int) -> int:
         return next(i for i, day in enumerate(self.days) if day.id == day_id)
