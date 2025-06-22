@@ -1,0 +1,28 @@
+{
+	"version": 2019122000,
+	"url": "https://pub.yori.cc/4d_2025_valkhof.xml",
+  "title": "Vierdaagsefeesten 2025 (Valkhof)",
+	"start": "2025-07-12",
+	"end": "2025-07-18",
+	"timezone": "Europe/Amsterdam",
+	"refresh_interval": 21600,
+	"metadata": {
+		"icon": "https://pub.yori.cc/vierdaagsefeesten_2024.png",
+		"links": [
+			{
+				"url": "https://www.vierdaagsefeesten.nl/",
+				"title": "Officiele website"
+			},
+			{
+				"url": "https://apploos.nl/4df/",
+				"title": "Apploos"
+			}
+		],
+		"rooms": [
+			{
+          "name": "De Kaaij.*",
+          "latlon": [51.849013,5.8715829]
+			}
+		]
+	}
+}
