@@ -97,7 +97,7 @@ class ProgramAPI(BaseModel):
     originCountry: bool
     sort: None
     customData: Any
-    ageWarnings: list[None]
+    ageWarnings: list[Literal["allAges"]]
     website: str | None
     description_short: str | None
     description: str

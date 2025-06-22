@@ -79,7 +79,7 @@ def event2frab(event: ProgramAPI) -> ET.Element:
         ET.SubElement(ret, "track").text = render_location_name(top_location)
     ET.SubElement(ret, "language")  # .text = "en"
     slug = event.slug.encode("ascii", "ignore").decode()
-    ET.SubElement(ret, "slug").text = f"vierdaagsef-2024-{event.id!s}-{slug}"
+    ET.SubElement(ret, "slug").text = f"vierdaagsef-2025-{event.id!s}-{slug}"
     ET.SubElement(ret, "subtitle")  # xs:string
     xrec = ET.SubElement(ret, "recording")
     ET.SubElement(xrec, "license")
@@ -112,7 +112,7 @@ urls = {
 
 def custom2frab(event: CustomEvent) -> ET.Element:
     url = urls[event.location]
-    event_date = date(2024, 7, 12) + timedelta(event.day)
+    event_date = date(2025, 7, 11) + timedelta(event.day)
     start = datetime.combine(event_date, event.start)
     end = datetime.combine(event_date, event.end)
     if start.hour < ROLLOVER_HOUR:
@@ -137,13 +137,13 @@ def custom2frab(event: CustomEvent) -> ET.Element:
     ET.SubElement(ret, "room").text = room
     ET.SubElement(ret, "title").text = title
     ET.SubElement(ret, "description").text = event.description
-    ET.SubElement(ret, "abstract").text = event.summary
+    ET.SubElement(ret, "abstract").text = ""
     ET.SubElement(ret, "type").text = "performance"
     if event.location:
         ET.SubElement(ret, "track").text = event.location
     ET.SubElement(ret, "language")  # .text = "en"
     slug = f"{event.location}-{event.day}-{slugify(event.name)}"
-    ET.SubElement(ret, "slug").text = f"vierdaagsef-2024-{event.id!s}-{slug}"
+    ET.SubElement(ret, "slug").text = f"vierdaagsef-2025-{event.id!s}-{slug}"
     ET.SubElement(ret, "subtitle")  # xs:string
     xrec = ET.SubElement(ret, "recording")
     ET.SubElement(xrec, "license")
@@ -153,17 +153,19 @@ def custom2frab(event: CustomEvent) -> ET.Element:
     ET.SubElement(ret, "attachments")
     ET.SubElement(ret, "url").text = url
     ET.SubElement(links, "link", href=url)
+    for f in event.links:
+        ET.SubElement(links, "link", href=f.url).text = f.name
     ET.SubElement(ret, "feedback_url").text = url  # httpURI
     return ret
 
 
-def create_frab_xml(api: AllAPI, title="Vierdaagsefeesten", flt=lambda _: True):
+def create_frab_xml(api: AllAPI, title="Vierdaagsefeesten 2025", flt=lambda _: True):
     schedule = ET.Element("schedule")
     ET.SubElement(schedule, "version").text = "0.2"
     conference = ET.SubElement(schedule, "conference")
     start_date = min([x.date for x in api.days]).date()
     end_date = max([x.date for x in api.days]).date()
-    ET.SubElement(conference, "acronym").text = "vierdaagsef-2024"
+    ET.SubElement(conference, "acronym").text = "vierdaagsef-2025"
     ET.SubElement(conference, "title").text = title
     ET.SubElement(conference, "start").text = start_date.strftime("%Y-%m-%d")
     ET.SubElement(conference, "end").text = end_date.strftime("%Y-%m-%d")
@@ -183,7 +185,11 @@ def create_frab_xml(api: AllAPI, title="Vierdaagsefeesten", flt=lambda _: True):
             continue
         if flt(program):
             event = event2frab(program)
-            day_ix = api.day_ix_by_id(program.day.id)
+            try:
+                day_ix = api.day_ix_by_id(program.day.id)
+            except StopIteration:
+                print("skipping", program.id, program.title)
+                continue
             _, xrooms = xdays[day_ix]
             loc_name = render_location_name(program.location.get())
             xrooms[loc_name].append(event)
@@ -209,6 +215,9 @@ def create_frab_xml(api: AllAPI, title="Vierdaagsefeesten", flt=lambda _: True):
 
     return ET.ElementTree(schedule)
 
+class CustomLink(BaseModel):
+    name: str
+    url: str
 
 class CustomEvent(BaseModel):
     location: str
@@ -216,26 +225,25 @@ class CustomEvent(BaseModel):
     name: str
     start: time
     end: time
-    summary: str = ""
     id: int
     description: str | None = None
+    links: list[CustomLink]
 
 
 def parse_custom_events() -> list[CustomEvent]:
-    import csv
+    import json
 
     i = 1000000
     res: list[CustomEvent] = []
     for datafile in Path("data").iterdir():
         loc = datafile.with_suffix("").name
         with datafile.open() as f:
-            for j in csv.DictReader(f):
-                res.append(CustomEvent(id=i, location=loc, **j))  # type: ignore[reportArgumentType]
-                i += 1
+            for j in json.load(f):
+                res.append(CustomEvent(id=i, location=loc, **j))
     return res
 
 
-parse_custom_events()
+# parse_custom_events()
 # TODO: download https://www.vierdaagsefeesten.nl/api/all
 
 
