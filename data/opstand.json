@@ -1,0 +1,429 @@
+[
+  {
+    "day": 1,
+    "date": "za 12 juli",
+    "name": "Arlequino",
+    "start": "20:00",
+    "end": "21:00",
+    "description": "alt-rock",
+    "links": [
+      { "name": "Facebook", "url": "https://www.facebook.com/ArlequinoBand/" },
+      { "name": "Instagram", "url": "https://www.instagram.com/arlequinoband/" },
+      { "name": "Spotify", "url": "https://open.spotify.com/artist/3341qg03iLmKpXmQ9iZugL" },
+      { "name": "Apple Music", "url": "https://music.apple.com/ie/artist/arlequino/1185948236" },
+      { "name": "Bandcamp", "url": "https://arlequino.bandcamp.com/" },
+      { "name": "SoundCloud", "url": "https://soundcloud.com/arlequinoband" },
+      { "name": "Band Website", "url": "https://arlequino.band/" }
+    ]
+  },
+  {
+    "day": 1,
+    "date": "za 12 juli",
+    "name": "Like Beef",
+    "start": "21:00",
+    "end": "22:00",
+    "description": "art-rock (Uit Berlijn)",
+    "links": [
+      { "name": "Instagram", "url": "https://www.instagram.com/like.beef.band/" },
+      { "name": "YouTube", "url": "https://www.youtube.com/@LikeBeef-band" },
+      { "name": "Bandcamp", "url": "https://likebeef.bandcamp.com/" },
+      { "name": "SoundCloud", "url": "https://on.soundcloud.com/Wj7e9Wr21anLedMm7" },
+      { "name": "Band Website", "url": "https://ames00-ayt.github.io/beef-epk/" }
+    ]
+  },
+  {
+    "day": 1,
+    "date": "za 12 juli",
+    "name": "Echidain",
+    "start": "22:00",
+    "end": "23:00",
+    "description": "shoegaze (Ook uit Berlijn)",
+    "links": [
+      { "name": "Instagram", "url": "https://www.instagram.com/echidainband/" },
+      { "name": "Apple Music", "url": "https://music.apple.com/us/artist/echidain/1796053409" },
+      { "name": "TikTok", "url": "https://www.tiktok.com/@echidain" },
+      { "name": "Bandcamp", "url": "https://echidain.bandcamp.com/" },
+      { "name": "Linktree", "url": "https://linktr.ee/echidain" }
+    ]
+  },
+  {
+    "day": 1,
+    "date": "za 12 juli",
+    "name": "Overwhelmed",
+    "start": "23:00",
+    "end": "00:00",
+    "description": "punk-rock",
+    "links": [
+      { "name": "Facebook", "url": "https://www.facebook.com/people/Overwhelmed-band/61560075401493/" },
+      { "name": "Instagram", "url": "https://www.instagram.com/overwhelmednoise/" },
+      { "name": "YouTube", "url": "https://www.youtube.com/@OverwhelmedNoise/videos" },
+      { "name": "Spotify", "url": "https://open.spotify.com/artist/07iuWPwhEiF98MJDRbYyA5?si=k2S0Aw3bSFCmrcyXckZknA&utm_medium=share&utm_source=linktree" },
+      { "name": "Apple Music", "url": "https://music.apple.com/us/artist/overwhelmed/1779282725" },
+      { "name": "TikTok", "url": "https://www.tiktok.com/@overwhelmednoise" },
+      { "name": "Bandcamp", "url": "https://overwhelmednoise.bandcamp.com/" },
+      { "name": "Linktree", "url": "https://linktr.ee/Overwhelmednoise" }
+    ]
+  },
+  {
+    "day": 2,
+    "date": "zo 13 juli",
+    "name": "Limerent",
+    "start": "20:00",
+    "end": "21:00",
+    "description": "alt-rock",
+    "links": [
+      { "name": "Instagram", "url": "https://www.instagram.com/limerent.band/" },
+      { "name": "YouTube", "url": "https://youtube.com/@limerentband" },
+      { "name": "Linktree", "url": "https://linktr.ee/limerentband" },
+      { "name": "Popronde", "url": "https://popronde.nl/profiel/35295" }
+    ]
+  },
+  {
+    "day": 2,
+    "date": "zo 13 juli",
+    "name": "Røyking",
+    "start": "21:00",
+    "end": "22:00",
+    "description": "punk, pop, grunge en rock",
+    "links": [
+      { "name": "Instagram", "url": "https://www.instagram.com/roykingband" },
+      { "name": "YouTube", "url": "https://www.youtube.com/@Roykingband" },
+      { "name": "Spotify", "url": "https://open.spotify.com/artist/1NtnritmdQdSfebKWpcJdp" },
+      { "name": "Bandcamp", "url": "https://royking.bandcamp.com/" },
+      { "name": "Popronde", "url": "https://popronde.nl/profiel/17111" },
+      { "name": "Band Website", "url": "http://www.royking.nl/" }
+    ]
+  },
+  {
+    "day": 2,
+    "date": "zo 13 juli",
+    "name": "Arbeidsongeschiktt",
+    "start": "22:00",
+    "end": "23:00",
+    "description": "garage, punk, herrie",
+    "links": [
+      { "name": "Instagram", "url": "https://www.instagram.com/arbeidsongeschiktt/" },
+      { "name": "Spotify", "url": "https://open.spotify.com/artist/3cGn7RpHYa7tRv7rHGk1We?si=41b2HOV8RZywqOEmMWpSmA" },
+      { "name": "3voor12", "url": "https://3voor12.vpro.nl/update~0f914bc0-4456-41b5-92ac-df905a83fcc3~nieuwe-muziek-arbeidsongeschikt~.html" },
+      { "name": "Popronde", "url": "https://popronde.nl/profiel/35649" }
+    ]
+  },
+  {
+    "day": 2,
+    "date": "zo 13 juli",
+    "name": "Seggs Tape",
+    "start": "23:00",
+    "end": "00:00",
+    "description": "rave punk (Rave punk from Madriz in España), in samenwerking met Willemeen",
+    "links": [
+      { "name": "Instagram", "url": "https://www.instagram.com/seggs.tape/" },
+      { "name": "YouTube", "url": "https://www.youtube.com/channel/UC0xhbMd0-QOQ43lENWQoizA" },
+      { "name": "Spotify", "url": "https://open.spotify.com/intl-de/artist/1N3CuZRPQ9tk8Jn33uOZi8?si=n6c5FwB0SPuaXIgcRXj-4g" },
+      { "name": "Bandcamp", "url": "https://seggstape.bandcamp.com/" },
+      { "name": "Willemeen", "url": "https://www.willemeen.nl/programma/willemeen-x-vierdaagsefeesten-seggs-tape-es-cafe-de-opstand/" }
+    ]
+  },
+  {
+    "day": 3,
+    "date": "ma 14 juli",
+    "name": "Body painting",
+    "start": "14:00",
+    "end": "21:00",
+    "description": null,
+    "links": [
+      { "name": "Instagram", "url": "https://www.instagram.com/laura_van_der_zeeuw/" }
+    ]
+  },
+  {
+    "day": 3,
+    "date": "ma 14 juli",
+    "name": "Crades",
+    "start": "21:00",
+    "end": "22:00",
+    "description": "alt-rock, post-punk",
+    "links": [
+      { "name": "Instagram", "url": "https://www.instagram.com/cradesband/" },
+      { "name": "YouTube", "url": "https://www.youtube.com/@cradesband" },
+      { "name": "Sonar", "url": "https://checksonar.nl/Crades" },
+      { "name": "3voor12", "url": "https://3voor12.vpro.nl/update~fae330da-d0d4-44c7-af76-0e4037186119~culturele-broedplaats-de-basis-presenteert-live-event-de-vliegbasis~.html" },
+      { "name": "Band Website", "url": "https://cradesband.com/" }
+    ]
+  },
+  {
+    "day": 3,
+    "date": "ma 14 juli",
+    "name": "Kinda Broke",
+    "start": "22:00",
+    "end": "23:00",
+    "description": "punk-rock",
+    "links": [
+      { "name": "Facebook", "url": "https://www.facebook.com/KindaBroke/" },
+      { "name": "Instagram", "url": "https://www.instagram.com/kinda_broke/" },
+      { "name": "YouTube", "url": "https://www.youtube.com/channel/UCoCLjKMNjr3a2Lps_lbMxmw" },
+      { "name": "Spotify", "url": "https://open.spotify.com/artist/0XKBf2Vr5gOK1jMze7xc9M?si=zsMqHQO5Tei6sbTYko8Irg" },
+      { "name": "Bandcamp", "url": "https://kindabroke.bandcamp.com/" },
+      { "name": "Popronde", "url": "https://popronde.nl/profiel/35527" }
+    ]
+  },
+  {
+    "day": 3,
+    "date": "ma 14 juli",
+    "name": "Rats and Daggers",
+    "start": "23:00",
+    "end": "00:00",
+    "description": "heavy punk",
+    "links": [
+      { "name": "Facebook", "url": "https://www.facebook.com/ratsanddaggers/" },
+      { "name": "Instagram", "url": "https://www.instagram.com/ratsanddaggers/" },
+      { "name": "YouTube", "url": "https://www.youtube.com/channel/UCWu40dGIbMlV5eT2SoMikHQ" },
+      { "name": "Spotify", "url": "https://open.spotify.com/artist/5ljSyEeelsYlFMUDLKdbXj?si=7eFA3L_bQ0O3NiyNnuuYgA" },
+      { "name": "Bandcamp", "url": "https://ratsanddaggers.bandcamp.com/" },
+      { "name": "SoundCloud", "url": "https://soundcloud.com/rats-and-daggers" },
+      { "name": "Popronde", "url": "https://popronde.nl/profiel/13009" },
+      { "name": "Band Website", "url": "https://www.ratsanddaggers.com/" }
+    ]
+  },
+  {
+    "day": 4,
+    "date": "di 15 juli",
+    "name": "POMME-GRENADE",
+    "start": "21:00",
+    "end": "22:00",
+    "description": "post-punk",
+    "links": [
+      { "name": "Instagram", "url": "https://www.instagram.com/pommegrenadetheband/" },
+      { "name": "TikTok", "url": "https://www.tiktok.com/@pommegrenadetheband" },
+      { "name": "Sonar", "url": "https://checksonar.nl/POMMEGRENADE" },
+      { "name": "SoundCloud", "url": "https://soundcloud.com/pomme-grenade-432756134" },
+      { "name": "Linktree", "url": "https://linktr.ee/POMMEGRENADETHEBAND" }
+    ]
+  },
+  {
+    "day": 4,
+    "date": "di 15 juli",
+    "name": "NOT FIT FOR TV",
+    "start": "22:00",
+    "end": "23:00",
+    "description": "post-punk",
+    "links": [
+      { "name": "Facebook", "url": "https://www.facebook.com/NOTFITFORTV/" },
+      { "name": "Instagram", "url": "https://www.instagram.com/notfitfortv_band/" },
+      { "name": "YouTube", "url": "https://www.youtube.com/@notfitfortv_band" },
+      { "name": "SoundCloud", "url": "https://soundcloud.com/notfit-fortv" },
+      { "name": "3voor12", "url": "https://3voor12.vpro.nl/lokaal/utrecht/update~dd8c5c7c-5327-4407-9cbe-44627757375c~not-fit-for-tv-gooit-post-punk-surf-en-garage-in-een-blender-op-eerste-single~.html" },
+      { "name": "Linktree", "url": "https://linktr.ee/Notfitfortv" }
+    ]
+  },
+  {
+    "day": 4,
+    "date": "di 15 juli",
+    "name": "Grandad",
+    "start": "23:00",
+    "end": "00:00",
+    "description": "garage-punk",
+    "links": [
+      { "name": "Facebook", "url": "https://www.facebook.com/GrandadArnhem/" },
+      { "name": "Instagram", "url": "https://www.instagram.com/grandad_band/" },
+      { "name": "YouTube", "url": "https://www.youtube.com/channel/UCYnijmnWR2Jsk88IKMUNFbg" },
+      { "name": "YouTube Music", "url": "https://music.youtube.com/channel/UCYnijmnWR2Jsk88IKMUNFbg" },
+      { "name": "Spotify", "url": "https://open.spotify.com/artist/3cYgV9Bxor0DFHme9eLbD0?si=XaQ0p_LaSZeixboEz6_ekw" },
+      { "name": "TikTok", "url": "https://www.tiktok.com/@grandadband/" },
+      { "name": "Sonar", "url": "https://checksonar.nl/Grandad" },
+      { "name": "Bandcamp", "url": "https://grandad.bandcamp.com/" },
+      { "name": "SoundCloud", "url": "https://soundcloud.com/user-618742809" },
+      { "name": "Popronde", "url": "https://popronde.nl/profiel/14779" },
+      { "name": "Linktree", "url": "https://linktr.ee/grandad_" }
+    ]
+  },
+  {
+    "day": 5,
+    "date": "wo 16 juli",
+    "name": "Queer Movie Night presenteert Queer Movie Shorts",
+    "start": "15:00",
+    "end": "20:00",
+    "description": null,
+    "links": []
+  },
+  {
+    "day": 5,
+    "date": "wo 16 juli",
+    "name": "Roze Wodka Woensdag",
+    "start": "20:00",
+    "end": "21:00",
+    "description": null,
+    "links": []
+  },
+  {
+    "day": 5,
+    "date": "wo 16 juli",
+    "name": "Droomboter",
+    "start": "21:00",
+    "end": "22:00",
+    "description": "post-punk (Kinderen voor Kinderen voor volwassenen)",
+    "links": [
+      { "name": "Instagram", "url": "https://www.instagram.com/droom.boter/" },
+      { "name": "YouTube", "url": "https://www.youtube.com/@Droomboter-band" },
+      { "name": "Spotify", "url": "https://open.spotify.com/artist/3y81wcAPwR3VfXjoxncwG9?si=8DkgKAjAShWPpiGCJl43DA" },
+      { "name": "Apple Music", "url": "https://music.apple.com/nl/artist/droomboter/1729486849" },
+      { "name": "Popronde", "url": "https://popronde.nl/profiel/35489" }
+    ]
+  },
+  {
+    "day": 5,
+    "date": "wo 16 juli",
+    "name": "Clitteband",
+    "start": "22:00",
+    "end": "23:00",
+    "description": "punk",
+    "links": [
+      { "name": "Facebook", "url": "https://www.facebook.com/people/CLITTEBAND/100086937254399/" },
+      { "name": "Instagram", "url": "https://www.instagram.com/clittebandband/" },
+      { "name": "YouTube", "url": "https://www.youtube.com/@clitteband" },
+      { "name": "Spotify", "url": "https://open.spotify.com/artist/1mdpsox66qFgKuJIzvPpFv" },
+      { "name": "Linktree", "url": "https://linktr.ee/clitteband" }
+    ]
+  },
+  {
+    "day": 5,
+    "date": "wo 16 juli",
+    "name": "Trui",
+    "start": "23:00",
+    "end": "00:00",
+    "description": "punk, folk",
+    "links": [
+      { "name": "Instagram", "url": "https://instagram.com/truideband" },
+      { "name": "YouTube", "url": "https://www.youtube.com/watch?v=l1nQyc7ugq0" },
+      { "name": "Spotify", "url": "https://open.spotify.com/artist/4gmgXRjKaV6mVK0t5FYrTe?si=j9jO-BmBRCuFNrzKayPg0w" },
+      { "name": "Popronde", "url": "https://popronde.nl/profiel/15503" }
+    ]
+  },
+  {
+    "day": 6,
+    "date": "do 17 juli",
+    "name": "Paper View",
+    "start": "15:00",
+    "end": "16:00",
+    "description": "dreamy indie rock. Vanmiddag treden een tweetal beginnende bands uit De Basis op. Komt allen kijken en luisteren, zodat je over een paar jaar kunt zeggen \"Ik was bij het allereerste optreden van deze band!\"",
+    "links": [
+      { "name": "Instagram", "url": "https://www.instagram.com/thisispaperview/" }
+    ]
+  },
+  {
+    "day": 6,
+    "date": "do 17 juli",
+    "name": "De Mis",
+    "start": "16:00",
+    "end": "21:00",
+    "description": "alternatieve rock, punk. Vanmiddag treden een tweetal beginnende bands uit De Basis op. Komt allen kijken en luisteren, zodat je over een paar jaar kunt zeggen \"Ik was bij het allereerste optreden van deze band!\"",
+    "links": [
+      { "name": "Instagram", "url": "https://www.instagram.com/de_mis_/" }
+    ]
+  },
+  {
+    "day": 6,
+    "date": "do 17 juli",
+    "name": "D’r Neffe",
+    "start": "21:00",
+    "end": "22:00",
+    "description": "Brabantse punk",
+    "links": [
+      { "name": "Instagram", "url": "https://www.instagram.com/drneffe.band" },
+      { "name": "TikTok", "url": "https://www.tiktok.com/@drneffe.band" },
+      { "name": "Popronde", "url": "https://popronde.nl/profiel/35162" }
+    ]
+  },
+  {
+    "day": 6,
+    "date": "do 17 juli",
+    "name": "Spit for the Masses",
+    "start": "22:00",
+    "end": "23:00",
+    "description": "black metal",
+    "links": [
+      { "name": "Facebook", "url": "https://www.facebook.com/spitforthemasses/" },
+      { "name": "Instagram", "url": "https://www.instagram.com/spitforthemasses/" },
+      { "name": "YouTube", "url": "https://www.youtube.com/@spitforthemasses" },
+      { "name": "Sonar", "url": "https://checksonar.nl/Spit" },
+      { "name": "Bandcamp", "url": "https://spitforthemasses.bandcamp.com/" },
+      { "name": "Encyclopaedia Metallum", "url": "https://www.metal-archives.com/bands/Spit_for_the_Masses/3540544474" },
+      { "name": "Linktree", "url": "https://linktr.ee/spitforthemasses" }
+    ]
+  },
+  {
+    "day": 6,
+    "date": "do 17 juli",
+    "name": "Radeloos///Ziedend",
+    "start": "23:00",
+    "end": "00:00",
+    "description": "black metal",
+    "links": [
+      { "name": "Facebook", "url": "https://www.facebook.com/radeloosziedend/" },
+      { "name": "Instagram", "url": "https://www.instagram.com/radeloosziedend/" },
+      { "name": "YouTube", "url": "https://youtube.com/@radeloosziedend" },
+      { "name": "Spotify", "url": "https://open.spotify.com/artist/6l0NXNFYkkn3chX6MW1xcj" },
+      { "name": "Bandcamp", "url": "https://radeloosziedend.bandcamp.com/" },
+      { "name": "Encyclopaedia Metallum", "url": "https://www.metal-archives.com/bands/Radeloos---Ziedend/3540524875" },
+      { "name": "Popronde", "url": "https://popronde.nl/profiel/12859" },
+      { "name": "Linktree", "url": "https://linktr.ee/radeloosziedend" }
+    ]
+  },
+  {
+    "day": 7,
+    "date": "vr 18 juli",
+    "name": "ManCrush",
+    "start": "20:00",
+    "end": "21:00",
+    "description": "vintage alt-rock",
+    "links": [
+      { "name": "Instagram", "url": "https://www.instagram.com/thebandmancrush/" },
+      { "name": "YouTube", "url": "https://www.youtube.com/@Mancrushtheband" },
+      { "name": "Sonar", "url": "https://checksonar.nl/ManCrush" }
+    ]
+  },
+  {
+    "day": 7,
+    "date": "vr 18 juli",
+    "name": "Anklebiters",
+    "start": "21:00",
+    "end": "22:00",
+    "description": "alt-punk",
+    "links": [
+      { "name": "Facebook", "url": "https://www.facebook.com/anklebiterstheband" },
+      { "name": "Instagram", "url": "https://www.instagram.com/anklebiterstheband/" },
+      { "name": "YouTube", "url": "https://www.youtube.com/channel/UCEhvbBaYz8U1ILU99TRTGHw" },
+      { "name": "Spotify", "url": "https://open.spotify.com/artist/7KiNzyoqbUDHcloJFKGvEW?si=hB032HSTTxG6_6fLrBiE7Q&nd=1&dlsi=e6614f5d61d5497d" },
+      { "name": "Sonar", "url": "https://checksonar.nl/ANKLEBITERS" },
+      { "name": "Bandcamp", "url": "https://anklebiterstheband.bandcamp.com/" },
+      { "name": "SoundCloud", "url": "https://soundcloud.com/anklebiters-353511307" },
+      { "name": "Linktree", "url": "https://linktr.ee/anklebiterstheband" }
+    ]
+  },
+  {
+    "day": 7,
+    "date": "vr 18 juli",
+    "name": "Flukes of Sendington",
+    "start": "22:00",
+    "end": "23:00",
+    "description": "rock (From Bundjalung/Byron Bay in Australia)",
+    "links": [
+      { "name": "Facebook", "url": "https://m.facebook.com/flukesofsendington/" },
+      { "name": "Instagram", "url": "https://www.instagram.com/flukesofsendington/" },
+      { "name": "Spotify", "url": "https://open.spotify.com/artist/67MIAEXxkhN86upx5GvJPM" },
+      { "name": "Bandcamp", "url": "https://flukesofsendington.bandcamp.com/" }
+    ]
+  },
+  {
+    "day": 7,
+    "date": "vr 18 juli",
+    "name": "Portray",
+    "start": "23:00",
+    "end": "00:00",
+    "description": "psychedelic indie garage rock",
+    "links": [
+      { "name": "Instagram", "url": "https://www.instagram.com/portrayofficial/" },
+      { "name": "YouTube", "url": "https://www.youtube.com/@PORTRAYofficial" },
+      { "name": "Popronde", "url": "https://popronde.nl/profiel/33793" },
+      { "name": "Band Website", "url": "https://checksonar.nl/portray" }
+    ]
+  }
+]
